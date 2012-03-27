@@ -6,7 +6,7 @@ snippet begin
 # Tabular
 snippet tab
 	\begin{${1:tabular}}{${2:c}}
-	${3}
+		${3}
 	\end{$1}
 # Align(ed)
 snippet ali
@@ -119,6 +119,12 @@ snippet page
 snippet doc
 	\documentclass{article}
 
+	\usepackage{latexsym}
+	\usepackage{amsmath}		
+	\usepackage{amssymb}
+	
+	\input local.tex
+
 	\begin{document}
 
 	\title{${1}}
@@ -130,3 +136,11 @@ snippet doc
 	${2}
 
 	\end{document}
+
+snippet fig 
+	\begin{figure}[${1:bt}]
+		${4}
+	\hrule
+	\caption{${2}}
+	\label{${3}}
+	\end{figure}

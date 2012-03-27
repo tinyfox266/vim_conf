@@ -116,10 +116,12 @@ endfunction " }}}
 " Provide <plug>'d mapping for easy user customization. {{{
 inoremap <silent> <Plug>Tex_MathBF      <C-r>=Tex_MathBF()<CR>
 inoremap <silent> <Plug>Tex_MathCal     <C-r>=Tex_MathCal()<CR>
-inoremap <silent> <Plug>Tex_LeftRight   <C-r>=Tex_LeftRight()<CR>
+" zppm
+" inoremap <silent> <Plug>Tex_LeftRight   <C-r>=Tex_LeftRight()<CR>
 vnoremap <silent> <Plug>Tex_MathBF		<C-C>`>a}<Esc>`<i\mathbf{<Esc>
 vnoremap <silent> <Plug>Tex_MathCal		<C-C>`>a}<Esc>`<i\mathcal{<Esc>
-nnoremap <silent> <Plug>Tex_LeftRight	:call Tex_PutLeftRight()<CR>
+" zppm 
+" nnoremap <silent> <Plug>Tex_LeftRight	:call Tex_PutLeftRight()<CR>
 
 " }}}
 " Tex_SetBracketingMaps: create mappings for the current buffer {{{
