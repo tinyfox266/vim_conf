@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='C:/Users/cat/vimfiles/bundle'
 let g:netrw_dirhist_2='C:/Users/cat/vimfiles/bundle/nerdtree'
 let g:netrw_dirhist_3='C:/Users/cat/vimfiles/bundle'
 let g:netrw_dirhist_4='C:/Users/cat/vimfiles/bundle/nerdtree'
+let g:netrw_dirhist_5='C:/Users/cat/vimfiles/.git/refs/remotes/origin'
+let g:netrw_dirhist_6='G:/research/Information_Flow_Control/note/vimwiki/.git/refs/heads'

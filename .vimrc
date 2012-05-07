@@ -29,17 +29,13 @@ noremap <C-J> <esc>:tabprevious<cr>
 noremap <C-K> <esc>:tabnext<cr>
 
 " tex
-autocmd BufEnter *.tex command! View !../compile
-autocmd	BufEnter *.tex set ft=tex
-"autocmd BufEnter *.tex command! See !pdflatex % && bibtex %:r && pdflatex % && foxit %:r.pdf
-"autocmd BufEnter *.tex command! Seem !pdflatex main.tex && bibtex main && pdflatex main.tex && foxit %:p:h/main.pdf
-"compile the main file main.tex
-autocmd BufEnter *.tex nnoremap <leader>lm :!pdflatex main.tex && bibtex main && pdflatex main.tex && foxit %:p:h/main.pdf<cr>
+autocmd	BufEnter,BufNewFile *.tex set ft=tex
+autocmd BufEnter,BufNewFile *.tex nnoremap <leader>lm :!pdflatex main.tex && bibtex main && pdflatex main.tex && foxit %:p:h/main.pdf<cr>
 
 " compiler the  current file
-autocmd BufEnter *.tex nnoremap <leader>lc :!pdflatex % && bibtex %:r && pdflatex % && foxit %:p:h/%:r.pdf<cr>
+autocmd BufEnter,BufNewFile *.tex nnoremap <leader>lc :!pdflatex % && bibtex %:r && pdflatex % && foxit %:p:h/%:r.pdf<cr>
 
-autocmd BufEnter *.tex nnoremap <leader>lt :set makeprg=pdflatex\ main.tex\ &&\ bibtex\ main\ &&\ pdflatex\ main.tex\ &&\ foxit %:p:h/main.pdf
+autocmd BufEnter,BufNewFile *.tex nnoremap <leader>lt :set makeprg=pdflatex\ main.tex\ &&\ bibtex\ main\ &&\ pdflatex\ main.tex\ &&\ foxit %:p:h/main.pdf
 " latex-suite
 set shellslash " for windows users 
 
@@ -79,4 +75,5 @@ let g:Powerline_symbols = 'fancy'
 " comment
 source ~/vimfiles/autoload/comments.vim
 
-
+" vimwiki
+let g:vimwiki_list=[{'path':'G:\research\Information_Flow_Control\note\vimwiki','path_html':'G:\research\Information_Flow_Control\note\vimwiki\html'}]
