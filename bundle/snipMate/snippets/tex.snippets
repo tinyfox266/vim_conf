@@ -1,3 +1,7 @@
+# \documentclass{...}
+snippet class
+	\documentclass{${1}}
+
 # \begin{}...\end{}
 snippet begin
 	\begin{${1:env}}
@@ -113,3 +117,11 @@ snippet section
 	${1:Section}~\ref{${2:sec:}}${3}
 snippet page
 	${1:page}~\pageref{${2}}${3}
+
+# added my zpp
+snippet fig
+	\begin{figure}
+	${3}
+	\hrule
+	\caption{${1:caption}}\label{fig:${2:label}}
+	\end{figure}
