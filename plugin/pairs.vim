@@ -1,7 +1,10 @@
 inoremap () ()<++><esc>T(i
 inoremap {} {}<++><esc>T{i
+inoremap [] []<++><esc>T[i
+inoremap "" ""<++><esc>F"i
 "inoremap () ()<esc>T(i
 "inoremap {} {}<esc>T{i
+
 
 inoremap <c-j> <esc>:call <SID>getOut()<cr><RIGHT>
 
