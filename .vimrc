@@ -30,7 +30,7 @@ noremap <C-K> <esc>:tabnext<cr>
 
 " tex
 autocmd	BufEnter,BufNewFile *.tex set ft=tex
-autocmd BufEnter,BufNewFile *.tex nnoremap <leader>lm :!pdflatex main.tex && bibtex main && pdflatex main.tex && foxit %:p:h/main.pdf<cr>
+autocmd BufEnter,BufNewFile *.tex nnoremap <leader>la :!pdflatex main.tex && bibtex main && pdflatex main.tex && foxit %:p:h/main.pdf<cr>
 
 " compiler the  current file
 autocmd BufEnter,BufNewFile *.tex nnoremap <leader>lc :!pdflatex % && bibtex %:r && pdflatex % && foxit %:p:h/%:r.pdf<cr>
@@ -77,3 +77,22 @@ source ~/vimfiles/autoload/comments.vim
 
 " vimwiki
 let g:vimwiki_list=[{'path':'G:\research\Information_Flow_Control\note\vimwiki','path_html':'G:\research\Information_Flow_Control\note\vimwiki\html'}]
+
+autocmd BufEnter,BufNewFile *.wiki nnoremap <leader>lc :Vimwiki2HTML<cr>
+
+autocmd BufEnter,BufNewFile *.wiki nnoremap <leader>la :VimwikiAll2HTML<cr>
+
+autocmd BufEnter,BufNewFile *.wiki nnoremap <leader>lv :Vimwiki2HTMLBrowse<cr>
+
+"autocomplpop
+" disable the filename completion, because it will match all the line with
+" "\"
+let g:acp_behaviorFileLength=-1
+
+
+" neocomplcache
+" Disable Auto
+let g:acp_enableAtStartup = 0
+" Use neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+

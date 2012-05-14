@@ -45,6 +45,7 @@ function s:makeDefaultBehavior()
             \   'completefunc' : g:acp_behaviorUserDefinedFunction,
             \   'meets'        : g:acp_behaviorUserDefinedMeets,
             \   'repeat'       : 0,
+{test}{}{}{\}
             \ })
     endfor
   endif
