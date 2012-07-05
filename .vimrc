@@ -95,4 +95,20 @@ let g:acp_behaviorFileLength=-1
 let g:acp_enableAtStartup = 0
 " Use neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+" AutoComplPop like behavior.
+let g:neocomplcache_enable_auto_select = 1
 
+" vim-indent
+let g:indent_guides_guide_size=1
+
+set cc=80
+map ,ch :call SetColorColumn()<CR>
+function! SetColorColumn()
+    let col_num = virtcol(".")
+    let cc_list = split(&cc,',')
+    if count(cc_list, string(col_num)) <= 0
+        execute "set cc+=".col_num
+    else 
+        execute "set cc-=".col_num
+    endif        
+endfunction
