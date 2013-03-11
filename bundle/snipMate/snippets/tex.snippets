@@ -123,5 +123,20 @@ snippet fig
 	\begin{figure}
 	${3}
 	\hrule
-	\caption{${1:caption}}\label{fig:${2:label}}
+	\caption{${1:caption}}
+	\label{fig:${2:label}}
 	\end{figure}
+
+snippet doc 
+	\documentclass{${1:article}}
+
+
+	\usepackage{asmmath}
+	\usepackage{amssymb}
+	\usepackage{latexsym}
+
+	\begin{document}
+	
+	${1}
+
+	\end{document}
