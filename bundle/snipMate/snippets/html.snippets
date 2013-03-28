@@ -162,7 +162,7 @@ snippet form
 	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
 	</form>
 snippet h1
-	<h1 id="${1:heading}">${2:$1}</h1>
+	<h1 id="${1:heading}">${2:$1}</h1>${3}
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
@@ -188,3 +188,25 @@ snippet table
 	</table>${4}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
+snippet alink
+	<a href="${1}">${2}</a>${3}
+snippet ol
+	<ol>
+		${1}	
+	</ol>
+
+snippet li
+	<li>
+		${1}
+	</li>
+snippet ul
+	<ul>
+		${1}
+	</ul>
+snippet cite
+	<cite>${1}</cite>${2}
+snippet bold
+	<b>${1}</b>${2}
+snippet br
+	<br>
+	${1}

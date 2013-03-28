@@ -1,6 +1,8 @@
 inoremap () ()<++><esc>T(i
 inoremap {} {}<++><esc>T{i
 inoremap [] []<++><esc>T[i
+inoremap <> <><++><esc>2T<i
+inoremap "" ""<++><esc>T"i
 "inoremap () ()<esc>T(i
 "inoremap {} {}<esc>T{i
 
