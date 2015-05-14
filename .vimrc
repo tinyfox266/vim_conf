@@ -23,6 +23,7 @@ set number
 source ~/.vim/my.vim
 nnoremap <leader>p "+p
 noremap <leader>y "+y
+iab xdate <c-r>=strftime('%Y-%m-%d')<cr>
 
 
 
@@ -31,6 +32,7 @@ nnoremap <leader>sv :source ~/.vimrc<cr>
 
 " tex
 autocmd	BufEnter *.tex set ft=tex
+autocmd	BufEnter *.jif set ft=java
 autocmd BufEnter *.tex command! See !pdflatex % && xpdf %:r.pdf
 autocmd BufEnter *.tex nnoremap <Leader>lc :!pdflatex % && zzopen %:r.pdf<cr>
 "autocmd BufEnter *.tex nnoremap <Leader>la :!pdflatex main.tex && bibtex main && pdflatex main.tex && zzopen main.pdf<cr>
@@ -105,3 +107,13 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
 let g:java_classpath="/home/tinyfox/usr/local/adt-bundle-linux-x86-20130219/sdk/sources/android-15/"
 autocmd Filetype java inoremap <buffer> .. .<C-X><C-O><C-P>
+
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/linux', 'path_html': '/home/zzp/Documents/blog/tinyfox266.github.com/wiki/'}]
+"let g:vimwiki_list = [{'path': '~/vimwiki/linux', 'path_html': '~/hello'}]
+noremap <leader>la :VimwikiAll2HTML<cr>
+
+" markdown
+autocmd BufEnter *.md nnoremap <leader>lc :!markdown2html.py % <cr>
+" <cr>
