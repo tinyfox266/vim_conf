@@ -19,7 +19,7 @@ set expandtab " use space to substitute tab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-set number
+" set number
 source ~/.vim/my.vim
 nnoremap <leader>p "+p
 noremap <leader>y "+y
@@ -115,5 +115,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/linux', 'path_html': '/home/zzp/Docume
 noremap <leader>la :VimwikiAll2HTML<cr>
 
 " markdown
-autocmd BufEnter *.md nnoremap <leader>lc :!markdown2html.py % <cr>
-" <cr>
+autocmd BufEnter *.md nnoremap <leader>lc :!markdown2html.py % <cr><cr>
+autocmd BufWrite *.md !markdown2html.py % 
+" let g:vim_markdown_folding_disable=1
+autocmd BufNewFile,BufRead *.md set nofoldenable
