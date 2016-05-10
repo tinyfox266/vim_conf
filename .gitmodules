@@ -1,0 +1,7 @@
+[submodule "bundle/OmniCppComplete"]
+    path = bundle/OmniCppComplete
+    url = https://github.com/vim-scripts/OmniCppComplete.git
+
+[submodule "bundle/AutoComplPop"]
+    path = bundle/AutoComplPop
+    url = https://github.com/vim-scripts/AutoComplPop.git
